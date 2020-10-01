@@ -1,6 +1,7 @@
 package serviceHandlers;
 
 import entities.*;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -20,7 +21,7 @@ public class AdminHandler {
 
         HttpEntity<Administrator> deliverObject = new HttpEntity<>(admin, headers);
         ResponseEntity<Void> responseEntity1 = restTemplate
-                .exchange(URL + "/administration", HttpMethod.POST, deliverObject, Void.class);
+                .exchange(URL + "/administration/admin", HttpMethod.POST, deliverObject, Void.class);
 
         HttpEntity<Porter> deliverObjectPorter = new HttpEntity<>(porter, headers);
         ResponseEntity<Void> responseEntity2 = restTemplate
@@ -35,7 +36,7 @@ public class AdminHandler {
                 .exchange(URL + "/administration/cashier", HttpMethod.POST, deliverObjectCashier, Void.class);
 
         ResponseEntity<Administrator> response3 = restTemplate
-                .exchange(URL + "/administration", HttpMethod.GET, headersEntity, Administrator.class);
+                .exchange(URL + "/administration/admin", HttpMethod.GET, headersEntity, Administrator.class);
 
         System.out.println(admin);
         System.out.println(porter);

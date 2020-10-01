@@ -17,14 +17,14 @@ public class HouseKeepingHandler {
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
     public void cleanRooms() {
         ResponseEntity<Void> responseEntity1 = restTemplate
-                .exchange(URL + "/householding/clean-rooms", HttpMethod.PUT, null, Void.class);
+                .exchange(URL + "/housekeeping/clean-rooms", HttpMethod.PUT, null, Void.class);
 
         System.out.println(responseEntity1.getStatusCode());
     }
 
     public void printContracts() {
         ResponseEntity<CleaningReportDTO> response = restTemplate
-                .exchange(URL + "/householding/reports", HttpMethod.GET, headersEntity, CleaningReportDTO.class);
+                .exchange(URL + "/housekeeping/reports", HttpMethod.GET, headersEntity, CleaningReportDTO.class);
 
         List<CleaningReport> reports = response.getBody().getReports();
 

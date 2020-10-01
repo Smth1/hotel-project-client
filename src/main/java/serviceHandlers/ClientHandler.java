@@ -1,15 +1,14 @@
 package serviceHandlers;
 
-import entities.Administrator;
 import entities.HotelClientContract;
 import entities.dto.ContractsDTO;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import javax.sound.midi.SysexMessage;
 import java.util.List;
 
 public class ClientHandler {

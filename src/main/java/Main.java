@@ -1,5 +1,3 @@
-import org.springframework.http.*;
-import org.springframework.web.client.RestTemplate;
 import serviceHandlers.*;
 
 public class Main {
@@ -7,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hotel started its work\n" + delimiter);
-
 
         AdminHandler adminHandler = new AdminHandler();
         RoomHandler roomHandler = new RoomHandler();

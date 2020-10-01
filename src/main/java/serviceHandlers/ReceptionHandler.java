@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class ReceptionHandler {
@@ -52,7 +53,7 @@ public class ReceptionHandler {
 
         ResponseEntity<ClientsDTO> response3 = restTemplate
                 .exchange(URL + "/clients", HttpMethod.GET, headersEntity, ClientsDTO.class);
-        List<HotelClient> clients = response3.getBody().getClients();
+        List<HotelClient> clients = Objects.requireNonNull(response3.getBody()).getClients();
         Random random = new Random();
 
         HotelClient client = clients.get(random.nextInt(clients.size()));

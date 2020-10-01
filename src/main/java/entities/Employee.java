@@ -2,7 +2,6 @@ package entities;
 
 import java.util.UUID;
 
-
 public abstract class Employee {
     private UUID id;
     private String name;

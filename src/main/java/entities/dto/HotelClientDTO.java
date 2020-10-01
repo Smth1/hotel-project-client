@@ -3,6 +3,6 @@ package entities.dto;
 import lombok.Data;
 
 @Data
-public class HotelClientDTO {
+public final class HotelClientDTO {
     private final String clientName;
 }
