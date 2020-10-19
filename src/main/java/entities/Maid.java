@@ -11,8 +11,8 @@ public class Maid extends Employee {
     @Override
     public String toString() {
         return "Maid{" +
-                "id=" + super.getId() +
-                ", name='" + super.getName() + '\'' +
+                "name='" + super.getName() + '\'' +
+                ", age='" + super.getAge() + '\'' +
                 '}';
     }
 

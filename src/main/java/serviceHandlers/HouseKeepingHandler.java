@@ -15,6 +15,7 @@ public class HouseKeepingHandler {
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
+
     public void cleanRooms() {
         ResponseEntity<Void> responseEntity1 = restTemplate
                 .exchange(URL + "/housekeeping/clean-rooms", HttpMethod.PUT, null, Void.class);

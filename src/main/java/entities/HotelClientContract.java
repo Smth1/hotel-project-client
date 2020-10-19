@@ -33,12 +33,12 @@ public class HotelClientContract {
         isOpen = true;
     }
 
-    public Administrator getHotelAdmin() {
-        return hotelAdmin;
+    public UUID getId() {
+        return id;
     }
 
-    public HotelClient getClient() {
-        return client;
+    public Administrator getHotelAdmin() {
+        return hotelAdmin;
     }
 
     public Room getRoom() {
@@ -59,17 +59,6 @@ public class HotelClientContract {
         return creationDate;
     }
 
-    public String getClosingDate() {
-        DateTimeFormatter dateTimeFormatter =
-                DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        return closingDate;
-    }
-
-    public void setClosedContract() {
-        this.isOpen = false;
-        this.closingDate = LocalDateTime.now().toString();
-    }
-
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -85,47 +74,5 @@ public class HotelClientContract {
         builder.append(" creationDate: ").append(this.getCreationDate());
 
         return builder.toString();
-    }
-
-    public static class ContractBuilder {
-        private Administrator nestedHotelAdmin;
-        private HotelClient nestedClient;
-        private Room nestedRoom;
-        private Cashier nestedCashier;
-        private Porter nestedPorter;
-
-        public ContractBuilder addAdministrator(
-                Administrator admin) {
-            this.nestedHotelAdmin = admin;
-            return this;
-        }
-
-        public ContractBuilder addClient(HotelClient client) {
-            this.nestedClient = client;
-            return this;
-        }
-
-        public ContractBuilder addRoom(Room room) {
-            this.nestedRoom = room;
-            return this;
-        }
-
-        public ContractBuilder addCashier(Cashier cashier) {
-            this.nestedCashier = cashier;
-            return this;
-        }
-
-        public ContractBuilder addPorter(Porter porter) {
-            this.nestedPorter = porter;
-            return this;
-        }
-
-        public HotelClientContract createContract() {
-            return new HotelClientContract(nestedHotelAdmin,
-                    nestedClient,
-                    nestedRoom,
-                    nestedCashier,
-                    nestedPorter);
-        }
     }
 }

@@ -16,6 +16,7 @@ public class ClientHandler {
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
+
     public void printContracts() {
         ResponseEntity<ContractsDTO> response3 = restTemplate
                 .exchange(URL + "/contracts", HttpMethod.GET, headersEntity, ContractsDTO.class);

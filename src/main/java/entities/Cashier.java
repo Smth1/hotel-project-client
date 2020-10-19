@@ -10,6 +10,7 @@ public class Cashier extends Employee {
     public String toString() {
         return "Cashier{" +
                 "name='" + super.getName() + '\'' +
+                ", age='" + super.getAge() + '\'' +
                 '}';
     }
 }

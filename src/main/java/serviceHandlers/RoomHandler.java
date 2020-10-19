@@ -12,6 +12,7 @@ public class RoomHandler {
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
+
     public void addRooms() {
         Room room1 = new Room(1,2);
         Room room2 = new Room(2,4);

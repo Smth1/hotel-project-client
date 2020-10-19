@@ -2,6 +2,7 @@ import serviceHandlers.*;
 
 public class Main {
     private static final String delimiter = "....................------------------------......................";
+
     public static void main(String[] args) {
 
         System.out.println("Hotel started its work\n" + delimiter);
@@ -26,6 +27,9 @@ public class Main {
 
         System.out.println("\nCustomer contracts \n" + delimiter);
         clientHandler.printContracts();
+
+        System.out.println("\nMoving out clients \n" + delimiter);
+        receptionHandler.moveOutClients();
 
         System.out.println("\nAll cleaning reports for this period \n" + delimiter);
         houseKeepingHandler.printContracts();

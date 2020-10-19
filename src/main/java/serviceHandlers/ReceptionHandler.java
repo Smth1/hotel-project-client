@@ -18,6 +18,7 @@ public class ReceptionHandler {
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
+
     public void serveClients() {
         String clientsUrl = "/reception/client";
         HotelClientDTO client1 = new HotelClientDTO("Asher");

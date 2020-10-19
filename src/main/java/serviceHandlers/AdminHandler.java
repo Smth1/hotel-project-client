@@ -13,6 +13,7 @@ public class AdminHandler {
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
+
     public void addEmployees() {
         Administrator admin = new Administrator("woeifj",234,"alksdjf");
         Porter porter = new Porter("Jack", 25);
@@ -29,7 +30,7 @@ public class AdminHandler {
 
         HttpEntity<Maid> deliverObjectMaid = new HttpEntity<>(maid, headers);
         ResponseEntity<Void> responseEntity3 = restTemplate
-                .exchange(URL + "/administration/maid", HttpMethod.POST, deliverObjectPorter, Void.class);
+                .exchange(URL + "/administration/maid", HttpMethod.POST, deliverObjectMaid, Void.class);
 
         HttpEntity<Cashier> deliverObjectCashier = new HttpEntity<>(cashier, headers);
         ResponseEntity<Void> responseEntity4 = restTemplate
