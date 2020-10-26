@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 public class RoomHandler {
-    private static final String URL = "http://localhost:8081";
+    private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);

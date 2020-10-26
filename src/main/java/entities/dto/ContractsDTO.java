@@ -8,5 +8,5 @@ import java.util.List;
 
 @Data
 public final class ContractsDTO {
-    private final List<HotelClientContract> contracts;
+    private List<HotelClientContractDTO> contracts;
 }

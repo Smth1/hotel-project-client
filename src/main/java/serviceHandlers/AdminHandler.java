@@ -2,6 +2,7 @@ package serviceHandlers;
 
 import entities.*;
 
+import entities.dto.AdministratorDTO;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -9,18 +10,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 public class AdminHandler {
-    private static final String URL = "http://localhost:8081";
+    private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();
     private static final HttpEntity<Object> headersEntity = new HttpEntity<>(headers);
 
     public void addEmployees() {
-        Administrator admin = new Administrator("woeifj",234,"alksdjf");
+        AdministratorDTO admin = new AdministratorDTO("woeifj",234,"alksdjf");
         Porter porter = new Porter("Jack", 25);
         Maid maid = new Maid("Amelia", 39);
         Cashier cashier = new Cashier("Ella", 30);
 
-        HttpEntity<Administrator> deliverObject = new HttpEntity<>(admin, headers);
+        HttpEntity<AdministratorDTO> deliverObject = new HttpEntity<>(admin, headers);
         ResponseEntity<Void> responseEntity1 = restTemplate
                 .exchange(URL + "/administration/admin", HttpMethod.POST, deliverObject, Void.class);
 

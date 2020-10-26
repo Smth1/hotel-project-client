@@ -10,7 +10,7 @@ public class Main {
         AdminHandler adminHandler = new AdminHandler();
         RoomHandler roomHandler = new RoomHandler();
         HouseKeepingHandler houseKeepingHandler = new HouseKeepingHandler();
-        ReceptionHandler receptionHandler = new ReceptionHandler();
+        ContractHandler contractHandler = new ContractHandler();
         ClientHandler clientHandler = new ClientHandler();
 
         System.out.println("\nCreating hotel staff \n" +  delimiter);
@@ -23,15 +23,15 @@ public class Main {
         houseKeepingHandler.cleanRooms();
 
         System.out.println("\nClients are at the reception\n" + delimiter);
-        receptionHandler.serveClients();
-
-        System.out.println("\nCustomer contracts \n" + delimiter);
-        clientHandler.printContracts();
+        clientHandler.serveClients();
 
         System.out.println("\nMoving out clients \n" + delimiter);
-        receptionHandler.moveOutClients();
+        clientHandler.moveOutClients();
+
+        System.out.println("\nCustomer contracts \n" + delimiter);
+        contractHandler.printContracts();
 
         System.out.println("\nAll cleaning reports for this period \n" + delimiter);
-        houseKeepingHandler.printContracts();
+        houseKeepingHandler.printReports();
     }
 }
