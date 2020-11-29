@@ -1,6 +1,4 @@
-package entities.dto;
-
-import entities.HotelClientContract;
+package com.roma.distr.entities.dto;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package serviceHandlers;
+package com.roma.distr.serviceHandlers.rest;
 
-import entities.dto.CleaningReportDTO;
-import entities.dto.CleaningReportsDTO;
+import com.roma.distr.entities.dto.CleaningReportDTO;
+import com.roma.distr.entities.dto.CleaningReportsDTO;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-public class HouseKeepingHandler {
+public class HouseKeepingRestHandler {
     private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();

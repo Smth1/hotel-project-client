@@ -1,11 +1,10 @@
-package serviceHandlers;
+package com.roma.distr.serviceHandlers.rest;
 
-import entities.HotelClient;
-import entities.HotelClientContract;
-import entities.dto.ClientsDTO;
-import entities.dto.ContractsDTO;
+import com.roma.distr.entities.HotelClient;
+import com.roma.distr.entities.HotelClientContract;
+import com.roma.distr.entities.dto.ClientsDTO;
 
-import entities.dto.HotelClientDTO;
+import com.roma.distr.entities.dto.HotelClientDTO;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
@@ -16,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 
-public class ClientHandler {
+public class ClientRestHandler {
     private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();

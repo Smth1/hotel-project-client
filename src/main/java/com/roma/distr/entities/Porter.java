@@ -1,14 +1,14 @@
-package entities;
+package com.roma.distr.entities;
 
-public class Cashier extends Employee {
+public class Porter extends Employee {
 
-    public Cashier(String name, int age) {
+    public Porter(String name, int age) {
         super(name, age);
     }
 
     @Override
     public String toString() {
-        return "Cashier{" +
+        return "Porter{" +
                 "name='" + super.getName() + '\'' +
                 ", age='" + super.getAge() + '\'' +
                 '}';

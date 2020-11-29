@@ -1,4 +1,4 @@
-package entities;
+package com.roma.distr.entities;
 
 import java.util.Objects;
 import java.util.UUID;

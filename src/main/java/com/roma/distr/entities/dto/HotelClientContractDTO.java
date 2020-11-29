@@ -1,10 +1,12 @@
-package entities.dto;
+package com.roma.distr.entities.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.UUID;
 
 @Data
+@Builder
 public final class HotelClientContractDTO {
     private UUID id;
 

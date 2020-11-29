@@ -1,4 +1,4 @@
-package entities.dto;
+package com.roma.distr.entities.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

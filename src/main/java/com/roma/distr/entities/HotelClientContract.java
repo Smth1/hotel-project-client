@@ -1,4 +1,4 @@
-package entities;
+package com.roma.distr.entities;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

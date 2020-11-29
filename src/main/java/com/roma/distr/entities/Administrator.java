@@ -1,4 +1,4 @@
-package entities;
+package com.roma.distr.entities;
 
 
 public class Administrator extends Employee {

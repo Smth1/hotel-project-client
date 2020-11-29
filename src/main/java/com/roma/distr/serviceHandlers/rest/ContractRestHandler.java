@@ -1,10 +1,7 @@
-package serviceHandlers;
+package com.roma.distr.serviceHandlers.rest;
 
-import entities.*;
-import entities.dto.ClientsDTO;
-import entities.dto.ContractsDTO;
-import entities.dto.HotelClientContractDTO;
-import entities.dto.HotelClientDTO;
+import com.roma.distr.entities.dto.ContractsDTO;
+import com.roma.distr.entities.dto.HotelClientContractDTO;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,10 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Random;
 
-public class ContractHandler {
+public class ContractRestHandler {
     private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();

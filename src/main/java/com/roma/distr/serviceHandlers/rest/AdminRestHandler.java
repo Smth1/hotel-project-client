@@ -1,15 +1,18 @@
-package serviceHandlers;
+package com.roma.distr.serviceHandlers.rest;
 
-import entities.*;
+import com.roma.distr.entities.Administrator;
+import com.roma.distr.entities.Cashier;
+import com.roma.distr.entities.Maid;
+import com.roma.distr.entities.Porter;
+import com.roma.distr.entities.dto.AdministratorDTO;
 
-import entities.dto.AdministratorDTO;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-public class AdminHandler {
+public class AdminRestHandler {
     private static final String URL = "http://localhost:8080";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final HttpHeaders headers = new HttpHeaders();

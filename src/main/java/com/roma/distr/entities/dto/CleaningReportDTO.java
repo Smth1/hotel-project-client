@@ -1,10 +1,14 @@
-package entities.dto;
+package com.roma.distr.entities.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.UUID;
 
+@AllArgsConstructor
+@Builder
 public final class CleaningReportDTO {
     private UUID id;
 
