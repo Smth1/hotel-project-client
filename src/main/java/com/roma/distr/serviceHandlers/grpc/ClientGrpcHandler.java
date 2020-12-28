@@ -16,7 +16,7 @@ public class ClientGrpcHandler {
     private final ClientServiceGrpc.ClientServiceBlockingStub clientStub;
 
     public ClientGrpcHandler() {
-        channel = ManagedChannelBuilder.forAddress(URL, 6565).
+        channel = ManagedChannelBuilder.forAddress(URL, 6560).
                 usePlaintext().build();
 
         clientStub = ClientServiceGrpc.newBlockingStub(channel);

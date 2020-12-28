@@ -17,7 +17,7 @@ public class HouseKeepingGrpcHandler {
     private final HouseKeepingServiceGrpc.HouseKeepingServiceBlockingStub houseKeepingStub;
 
     public HouseKeepingGrpcHandler() {
-        channel = ManagedChannelBuilder.forAddress(URL, 6565).
+        channel = ManagedChannelBuilder.forAddress(URL, 6560).
                 usePlaintext().build();
 
         houseKeepingStub = HouseKeepingServiceGrpc.newBlockingStub(channel);

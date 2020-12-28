@@ -10,9 +10,6 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
 import javax.annotation.PreDestroy;
-import javax.net.ssl.SSLEngineResult;
-import java.io.ObjectInputFilter;
-import java.util.UUID;
 
 public class AdminGrpcHandler {
     private final String URL = "localhost";
@@ -25,7 +22,7 @@ public class AdminGrpcHandler {
 
 
     public AdminGrpcHandler() {
-        channel = ManagedChannelBuilder.forAddress(URL, 6565).
+        channel = ManagedChannelBuilder.forAddress(URL, 6560).
                 usePlaintext().build();
         adminStub = AdminServiceGrpc.newBlockingStub(channel);
         cashierStub = CashierServiceGrpc.newBlockingStub(channel);

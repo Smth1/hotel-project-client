@@ -14,7 +14,7 @@ public class RoomGrpcHandler {
     private final RoomServiceGrpc.RoomServiceBlockingStub roomStub;
 
     public RoomGrpcHandler() {
-        channel = ManagedChannelBuilder.forAddress(URL, 6565).
+        channel = ManagedChannelBuilder.forAddress(URL, 6560).
                 usePlaintext().build();
 
         roomStub = RoomServiceGrpc.newBlockingStub(channel);

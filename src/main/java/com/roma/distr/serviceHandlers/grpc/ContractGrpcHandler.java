@@ -20,7 +20,7 @@ public class ContractGrpcHandler {
     private final ContractServiceGrpc.ContractServiceBlockingStub contractStub;
 
     public ContractGrpcHandler() {
-        channel = ManagedChannelBuilder.forAddress(URL, 6565).
+        channel = ManagedChannelBuilder.forAddress(URL, 6560).
                 usePlaintext().build();
 
         contractStub = ContractServiceGrpc.newBlockingStub(channel);
