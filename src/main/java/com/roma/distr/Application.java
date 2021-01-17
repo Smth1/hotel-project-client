@@ -1,6 +1,7 @@
 package com.roma.distr;
 
 import com.roma.distr.serviceHandlers.grpc.*;
+import com.roma.distr.serviceHandlers.rabbitmq.ClientMqHandler;
 import com.roma.distr.serviceHandlers.rabbitmq.RoomMqHandler;
 import com.roma.distr.serviceHandlers.rest.*;
 
@@ -9,6 +10,7 @@ public class Application {
 
     public static void main(String[] args) {
         Application app = new Application();
+        //app.grpcHandler();
         app.rabbitmqHandler();
     }
 
@@ -59,7 +61,7 @@ public class Application {
         roomGrpcHandler.addRooms();
 
         System.out.println("\nRooms must be clean before settling");
-        houseKeepingGrpcHandler.cleanRooms();
+        //houseKeepingGrpcHandler.cleanRooms();
 
         System.out.println("\nClients are at the reception\n" + delimiter);
         clientGrpcHandler.serveClients();
@@ -78,7 +80,10 @@ public class Application {
         System.out.println("Rabbitmq Provider\n" + delimiter);
 
         RoomMqHandler roomMqHandler = new RoomMqHandler();
+        ClientMqHandler clientMqHandler = new ClientMqHandler();
 
         roomMqHandler.addRooms();
+
+        clientMqHandler.serveClients();
     }
 }
